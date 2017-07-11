@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SkViewsDemo</string>
+    <string name="itemTemplateSelector">com.hdingmin.skviewsdemo.TestItemTempleSelector</string>
 </resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="itemTemplate" format="reference" />
+    <attr name="itemTemplateSelector" format="string"/>
+    <declare-styleable name="SkLinearLayout">
+        <attr name="itemTemplate"/>
+        <attr name="itemTemplateSelector"/>
+        <attr name="autoNextLine" format="boolean"/>
+        <attr name="dividerSize" format="dimension"/>
+    </declare-styleable>
+</resources>

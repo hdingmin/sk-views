@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.hdingmin.skviews.views.SkLinearLayout
+        android:id="@+id/single_temp_linearlayout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        app:autoNextLine="true"
+        app:dividerSize="10dp"
+        app:itemTemplate="@layout/sklinearlayout_item1"
+        android:layout_height="0dp">
+
+    </com.hdingmin.skviews.views.SkLinearLayout>
+    <com.hdingmin.skviews.views.SkLinearLayout
+        android:id="@+id/multi_temp_linearlayout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        app:autoNextLine="true"
+        app:dividerSize="10dp"
+        app:itemTemplateSelector="@string/itemTemplateSelector"
+        android:layout_height="0dp">
+
+    </com.hdingmin.skviews.views.SkLinearLayout>
+</LinearLayout>
