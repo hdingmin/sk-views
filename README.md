@@ -7,7 +7,7 @@
 ### 注意
 - 数据量少的情况下使用
 
-![截图](https://github.com/hdingmin/sk-views/blob/master/images/sklinearlayout.png)
+![截图](https://github.com/hdingmin/sk-views/blob/master/images/sklinearlayout2.png)
 
 ## SkPoint（小圆点）
 ### 功能
