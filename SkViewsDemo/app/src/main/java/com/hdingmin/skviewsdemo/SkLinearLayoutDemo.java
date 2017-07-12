@@ -60,6 +60,6 @@ public class SkLinearLayoutDemo extends AppCompatActivity {
             }
         });
         //最后设置数据源
-        multiTempLinearLayout.setItemSource(DataFactory.getSkLinearLayoutData("单个Item模板，自动换行"));
+        multiTempLinearLayout.setItemSource(DataFactory.getSkLinearLayoutData("多模板，自动换行"));
     }
 }
