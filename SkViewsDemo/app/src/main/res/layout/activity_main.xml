@@ -15,6 +15,11 @@
             android:text="自动换行，模板子View LinearLayout Demo"
             android:layout_width="match_parent"
             android:layout_height="50dp" />
+       <Button
+           android:id="@+id/sk_point"
+           android:text="SkPoint"
+           android:layout_width="match_parent"
+           android:layout_height="50dp" />
    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

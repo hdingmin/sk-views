@@ -8,4 +8,13 @@
         <attr name="autoNextLine" format="boolean"/>
         <attr name="dividerSize" format="dimension"/>
     </declare-styleable>
+    <declare-styleable name="SkPoint">
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderColor" format="color" />
+        <attr name="isPoint" format="boolean" />
+        <attr name="textSize" format="dimension" />
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
 </resources>

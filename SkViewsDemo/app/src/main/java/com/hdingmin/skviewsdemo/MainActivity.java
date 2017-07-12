@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.sk_linearlayout).setOnClickListener(this);
+        findViewById(R.id.sk_point).setOnClickListener(this);
     }
 
     @Override
@@ -20,6 +21,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.sk_linearlayout:
                 Intent intent = new Intent(this,SkLinearLayoutDemo.class);
                 startActivity(intent);
+                break;
+            case R.id.sk_point:
+                Intent intent2 = new Intent(this,SkPointDemo.class);
+                startActivity(intent2);
                 break;
             default:break;
         }

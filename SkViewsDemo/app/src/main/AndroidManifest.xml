@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SkLinearLayoutDemo"></activity>
+        <activity android:name=".SkLinearLayoutDemo" />
+        <activity android:name=".SkPointDemo"></activity>
     </application>
 
 </manifest>
