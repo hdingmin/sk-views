@@ -10,3 +10,5 @@
 ### 功能
 - 自定义边框粗细，颜色
 - 自定义圆点背景色，字体颜色
+
+![截图](https://github.com/hdingmin/sk-views/blob/master/images/skpoint.png)
