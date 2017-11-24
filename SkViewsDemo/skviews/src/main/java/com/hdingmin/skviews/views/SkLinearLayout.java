@@ -69,12 +69,15 @@ public class SkLinearLayout extends LinearLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int width = MeasureSpec.getSize(widthMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);
+        int widthMode =  MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         if(autoNextLine)
         {
             int mWidth = width -   getPaddingLeft() - getPaddingRight();
             int mCount = getChildCount();
             int mX =0;
             int mY = 0;
+            int wrapHeight = 0;
             mLeft = 0;
             mRight = 0;
             mTop =getPaddingTop() ;
@@ -90,7 +93,9 @@ public class SkLinearLayout extends LinearLayout {
                 int childW = child.getMeasuredWidth();
                 int childH = child.getMeasuredHeight();
                 mX+=childW;
-
+                if(i==0) { //第一次赋初始值
+                    wrapHeight = childH;
+                }
                 Position position = new Position();
                 mLeft =getPositionLeft(i-j,i);
                 mRight = mLeft +child.getMeasuredWidth();
@@ -98,6 +103,7 @@ public class SkLinearLayout extends LinearLayout {
                 {
                     mX = childW;
                     mY+=childH+dividerSize;
+                    wrapHeight+=childH+dividerSize;
                     j=i;
                     mLeft = getPaddingLeft();
                     mRight = mLeft+child.getMeasuredWidth();
@@ -115,9 +121,13 @@ public class SkLinearLayout extends LinearLayout {
                     map.put(child,position);
                 }
             }
+            if(heightMode == MeasureSpec.AT_MOST) {//如果是Wrap_Content 需要计算高度
+                height = wrapHeight + getPaddingTop() + getPaddingBottom();
+            }
             setMeasuredDimension(width,height);
+        }else {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         }
-        super.onMeasure(widthMeasureSpec,heightMeasureSpec);
     }
     private int getPositionLeft(int indexInRow,int childIndex)
     {
